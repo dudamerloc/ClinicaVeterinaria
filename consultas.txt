@@ -1,0 +1,2 @@
+Animal: Tiffany | Tipo: Cachorra TombaLata | Veterinário: Dra. Maria Eduarda | Data: 2025-05-26 | Descrição: consulta pré cirurgica
+Animal: Tiffany | Tipo: Cachorro Vira Lata | Veterinário: Dra. Maria Eduarda | Data: 2025-05-26 | Descrição: Limpeza dentária
