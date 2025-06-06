@@ -1,0 +1,2 @@
+Animal: Meg | Tipo: Gato Vira-lata | Veterinário: Dra. Maria Eduarda | Data: 2025-06-06 | Descrição: Exame de Rotina
+Animal: Tiffany | Tipo: Lhasa | Veterinário: Dra. Maria Eduarda | Data: 2025-06-06 | Descrição: Limpeza Dentaria

@@ -28,7 +28,9 @@ public class Menu {
             System.out.println("4. Listar Atendimentos");
             System.out.println("5. Sair");
             System.out.print("Escolha uma opção: ");
+
             String opcao = scanner.nextLine();
+            System.out.println();
 
             switch (opcao) {
                 case "1":
@@ -58,9 +60,9 @@ public class Menu {
         String nome = scanner.nextLine();
         System.out.print("CPF do cliente: ");
         String cpf = scanner.nextLine();
-        System.out.println("Telefone para contato: ");
+        System.out.print("Telefone para contato: ");
         String telefone = scanner.nextLine();
-        System.out.println("Endereço do tutor: ");
+        System.out.print("Endereço do tutor: ");
         String endereco= scanner.nextLine();
 
         Cliente cliente = new Cliente(nome, cpf, telefone, endereco);
@@ -83,9 +85,9 @@ public class Menu {
         String nomeAnimal = scanner.nextLine();
         System.out.print("Tipo e raça do pet: ");
         String tipo = scanner.nextLine();
-        System.out.println("Qual o Sexo do Pet(F/M)? ");
+        System.out.print("Qual o Sexo do Pet (F/M)? ");
         String sexo = scanner.nextLine();
-        System.out.println("O Pet e Castrado? ");
+        System.out.print("O Pet e Castrado (SIM/NÃO)? ");
         String castrado = scanner.nextLine();
 
         Animal animal = new Animal(nomeAnimal, tipo, sexo, castrado);

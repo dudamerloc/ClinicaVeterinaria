@@ -34,7 +34,10 @@ public class ClinicaController {
         }
         consultas.add(consulta);
 
-        String info = "Consulta em " + consulta.getData() + " com " + consulta.getVeterinario().getNome() + ": " + consulta.getDescricao();
+        String info = "Consulta em "
+                + consulta.getData()
+                + " com " + consulta.getVeterinario().getNome()
+                + ": " + consulta.getDescricao();
         consulta.getAnimal().adicionarHistorico(info);
 
         salvarConsultaEmArquivo(consulta);
