@@ -12,10 +12,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
-    private ClinicaController controller = new ClinicaController();
-    private Scanner scanner = new Scanner(System.in);
+    private ClinicaController controller = new ClinicaController();  // Controlador da clínica para gerenciar dados
+    private Scanner scanner = new Scanner(System.in);               // Scanner para leitura de entrada do usuário
 
+    // Método principal que inicia o menu interativo da aplicação
     public void iniciar() {
+        // Adiciona veterinários iniciais ao sistema
         controller.adicionarVeterinario(new Veterinario("Dra. Julia Cazeri", "99988877766", "CRMV:1234"));
         controller.adicionarVeterinario(new Veterinario("Dra. Maria Eduarda", "11122233344", "CRMV:5678"));
 
@@ -32,6 +34,7 @@ public class Menu {
             String opcao = scanner.nextLine();
             System.out.println();
 
+            // Processa a opção escolhida pelo usuário
             switch (opcao) {
                 case "1":
                     cadastrarCliente();
@@ -55,6 +58,7 @@ public class Menu {
         }
     }
 
+    // Método para cadastrar um novo cliente (tutor do pet)
     private void cadastrarCliente() {
         System.out.print("Nome do Tutor: ");
         String nome = scanner.nextLine();
@@ -71,6 +75,7 @@ public class Menu {
         System.out.println("Cliente cadastrado com sucesso!");
     }
 
+    // Método para cadastrar um novo animal associado a um cliente
     private void cadastrarAnimal() {
         System.out.print("CPF do tutor do animal: ");
         String cpf = scanner.nextLine();
@@ -96,6 +101,7 @@ public class Menu {
         System.out.println("Pet cadastrado com sucesso para o Tutor " + cliente.getNome());
     }
 
+    // Método para agendar uma consulta veterinária para um animal de um cliente
     private void agendarConsulta() {
         System.out.print("CPF do Tutor: ");
         String cpf = scanner.nextLine();
@@ -111,6 +117,7 @@ public class Menu {
             return;
         }
 
+        // Lista os pets do cliente para seleção
         System.out.println("Pet(s) do Tutor:");
         for (int i = 0; i < animais.size(); i++) {
             System.out.println((i + 1) + ". " + animais.get(i).getNome() + " (" + animais.get(i).getTipo() + ")");
@@ -128,6 +135,7 @@ public class Menu {
             return;
         }
 
+        // Lista os veterinários disponíveis para seleção
         System.out.println("Veterinários disponíveis:");
         List<Veterinario> listaVet = controller.getVeterinarios().stream().toList();
         for (int i = 0; i < listaVet.size(); i++) {
@@ -153,6 +161,7 @@ public class Menu {
         }
     }
 
+    // Método para listar todas as consultas agendadas
     private void listarAtendimentos() {
         List<Consulta> consultas = controller.getConsultas();
         if (consultas.isEmpty()) {
@@ -169,4 +178,3 @@ public class Menu {
         }
     }
 }
-

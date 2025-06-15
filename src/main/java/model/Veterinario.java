@@ -5,12 +5,14 @@ public class Veterinario {
     private String cpf;
     private String crmv;
 
+    // Construtor que inicializa o veterinário com nome, CPF e CRMV
     public Veterinario(String nome, String cpf, String crmv) {
         this.nome = nome;
         this.cpf = cpf;
         this.crmv = crmv;
     }
 
+    // Getters e setters para acessar e modificar os atributos
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
 
@@ -22,10 +24,10 @@ public class Veterinario {
 
     @Override
     public boolean equals(Object obj) {
-        if(this == obj) return true;
-        if(obj == null || getClass() != obj.getClass()) return false;
+        if(this == obj) return true;  // Mesma referência, retorna true
+        if(obj == null || getClass() != obj.getClass()) return false;  // Null ou classe diferente, retorna false
         Veterinario other = (Veterinario) obj;
-        return crmv.equals(other.crmv);
+        return crmv.equals(other.crmv);  // Compara o CRMV para definir igualdade
     }
 
     @Override
